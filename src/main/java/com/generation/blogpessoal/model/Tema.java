@@ -27,7 +27,7 @@ public class Tema {
 	@NotNull(message = "A descrição é obrigatória")
 	private String descricao;
 
-	// não esta funcionando com o lazy apenas com o eager
+
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "tema", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("tema")
 	
